@@ -10,5 +10,5 @@ def the_time():
     return f"<h1>Current time: {current}</h1>"
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8044)
+    app.run(host="10.92.21.104", port=8044)
 
