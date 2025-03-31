@@ -8,5 +8,5 @@ test:
 	. venv/bin/activate && pytest
 
 run:
-	. venv/bin/activate && python3 app.py
+	. venv/bin/activate && gunicorn -b 0.0.0.0:8044 app:app
 
