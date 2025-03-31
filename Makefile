@@ -5,8 +5,8 @@ clean:
 	rm -rf venv __pycache__
 
 test:
-	pytest
+	source venv/bin/activate && pytest
 
 run:
-	python app.py
+	source venv/bin/activate && python app.py
 
