@@ -1,2 +1,4 @@
 # timeweb
-Devops A6
+
+cd 
+flask run
