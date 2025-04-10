@@ -11,6 +11,8 @@ RUN useradd -m developer && echo "developer ALL=(ALL) NOPASSWD:ALL" > /etc/sudoe
 USER developer
 WORKDIR /home/developer
 
+RUN chown -R developer:developer /home/developer/timeweb
+
 RUN git config --global user.name "Dev" && \
     git config --global user.email "dev@timeweb.local"
 
