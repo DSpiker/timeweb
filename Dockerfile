@@ -13,7 +13,9 @@ WORKDIR /home/developer
 
 COPY ./timeweb /home/developer/timeweb
 
-RUN chown -R developer:developer /home/developer/timeweb
+RUN find /home/developer/timeweb -type d -exec chmod 755 {} \; && \
+	find /home/developer/timeweb -type f -exec chmod 644 {} \; && \
+	RUN chown -R developer:developer /home/developer/timeweb
 
 RUN git config --global user.name "Dev" && \
     git config --global user.email "dev@timeweb.local"
