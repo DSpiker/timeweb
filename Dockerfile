@@ -18,7 +18,7 @@ RUN git config --global user.name "Dev" && \
 
 RUN chmod -R 777 /home/developer/timeweb
 
-COPY ./timeweb /home/developer/timeweb
+COPY ../timeweb /home/developer/timeweb
 
 CMD ["/bin/bash"]
 
