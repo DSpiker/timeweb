@@ -7,3 +7,5 @@ clean:
 test:
 	. venv/bin/activate && pytest
 
+run:
+	. venv/bin/activate && python3 app.py
