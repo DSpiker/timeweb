@@ -10,7 +10,7 @@
 #Enter directory
 - cd /home/developer/timeweb
 
-#Set up env
+#Setup env
 - make setup
 
 #Run env
