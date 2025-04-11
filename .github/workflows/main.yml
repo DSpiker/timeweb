@@ -2,11 +2,11 @@ name: CI
 
 on:
   push:
-    branches:
-      - main
+    paths:
+      - 'timeweb/**'
   pull_request:
-    branches:
-      - main
+    paths:
+      - 'timeweb/**'
 
 jobs:
   build:
