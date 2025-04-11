@@ -19,13 +19,14 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'  # Specify the Python version
+          python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
-        working-directory: ./timeweb
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r timeweb/requirements.txt
 
       - name: Run Makefile targets
         run: |
           make test
-
+        working-directory: ./timeweb
