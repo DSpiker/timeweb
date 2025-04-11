@@ -29,6 +29,10 @@ jobs:
       - name: Create virtual environment
         run: |
           python -m venv venv  
+          echo "Virtual environment created"
+
+      - name: Install dependencies in virtual environment
+        run: |
           . venv/bin/activate  
           pip install Flask pytest  
 
