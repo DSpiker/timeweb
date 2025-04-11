@@ -2,7 +2,7 @@
 docker pull dspiker/class-dev-container
 
 #Run it
-docker run -it -v $(pwd):/home/developer/timeweb dspiker/class-dev-container
+docker run -it --rm dspiker/class-dev-container
 
 #Enter directory
 cd timeweb
