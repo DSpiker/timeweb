@@ -18,6 +18,6 @@ COPY .profile .profile
 
 RUN sudo chown developer .profile
 
-CMD ["/bin/bash", "--rcfile", "/home/developer/.profile"]
+CMD ["/bin/bash", "-c", "source /home/developer/.profile && exec bash"]
 
 
