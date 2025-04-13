@@ -7,17 +7,11 @@ RUN apt-get update && apt-get install -y \
 
 RUN useradd -m developer && echo "developer ALL=(ALL) NOPASSWD:ALL" >/etc/sudoers.d/developer
 
-
 USER developer
 WORKDIR /home/developer
 
-RUN git config --global user.name "DSpiker" && \
-    git config --global user.email "dspiker23@gmail.com"
+COPY entrypoint.sh /home/developer/entrypoint.sh
+RUN chmod +x /home/developer/entrypoint.sh
 
-COPY .profile .profile
-
-RUN sudo chown developer .profile
-
-CMD ["/bin/bash", "-c", "source /home/developer/.profile && exec bash"]
-
+ENTRYPOINT ["/home/developer/entrypoint.sh"]
 
