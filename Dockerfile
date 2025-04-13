@@ -7,11 +7,11 @@ RUN apt-get update && apt-get install -y \
 
 RUN useradd -m developer && echo "developer ALL=(ALL) NOPASSWD:ALL" >/etc/sudoers.d/developer
 
-USER developer
-WORKDIR /home/developer
-
 COPY entrypoint.sh /home/developer/entrypoint.sh
 RUN chmod +x /home/developer/entrypoint.sh
+
+USER developer
+WORKDIR /home/developer
 
 ENTRYPOINT ["/home/developer/entrypoint.sh"]
 
